@@ -59,10 +59,6 @@ img{
 	margin: 40px 8px;
 }
 
-img:hover{
-	margin: 0 8px;
-}
-
 footer{
 	text-transform: uppercase;
 	padding: 0 20px;
