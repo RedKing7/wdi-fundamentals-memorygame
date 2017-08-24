@@ -31,6 +31,7 @@ var checkForMatch = function(card1, card2){
 		if(card1.rank === card2.rank){
 			alert("You found a match!");
 			score += 2;
+			document.getElementById('score').textContent = 'Score: ' + score;
 			if(score >= cards.length){
 				alert("You Win!");
 			}
@@ -45,7 +46,7 @@ var checkForMatch = function(card1, card2){
 			}
 		}
 	}
-	, 500);
+	, 250);
 	cardsInPlay = [];
 }
 
@@ -77,10 +78,12 @@ var createBoard = function(){
 		cardElement.addEventListener('click', flipCard);
 		document.getElementById('game-board').appendChild(cardElement);
 	}
+	document.getElementById('score').textContent = 'Score: ' + score;
 }
 
 var reset = function(){
 	score = 0;
+	document.getElementById('score').textContent = 'Score: ' + score;
 	cardsInPlay = [];
 	var imgs = document.getElementsByTagName('img');
 	for(var i=0; i<imgs.length; i++){
